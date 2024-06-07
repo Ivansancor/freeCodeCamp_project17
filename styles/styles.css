@@ -15,6 +15,7 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -34,6 +35,7 @@ header {
     width: 100%;
     height: 10rem;
     padding: 2rem 3rem;
+    z-index: 1;
 }
 
 header i {
@@ -69,7 +71,6 @@ a {
     color: var(--secondary-color);
 }
 
-
 a:hover {
     color: var(--main-color);
     transform: scale(0.95);
@@ -78,18 +79,19 @@ a:hover {
 
 main {
     width: 80%;
+    margin: 0 auto;
 }
 
 
-main #form {
+main #top {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 2rem;
+    text-align: center;
 }
 
-#form input[type="email"] {
+#top input[type="email"] {
     width: 50%;
     height: 3rem;
     border-radius: 0.2rem;
@@ -99,8 +101,8 @@ main #form {
     padding-left: 1rem;
 }
 
-#form input[type="submit"] {
-    width: 20%;
+#top input[type="submit"] {
+    width: 25%;
     height: 5rem;
     color: white;
     border: none;
@@ -110,7 +112,91 @@ main #form {
     background-color: var(--main-color);
 }
 
-#form input[type="submit"]:hover {
+#top input[type="submit"]:hover {
+    color: var(--main-color);
+    background-color: var(--third-color);
+    border: 0.2rem solid var(--main-color);
+    transform: scale(0.95);
+    transition: all 0.15s;
+    cursor: pointer;
+}
+
+main section {
+    margin: 5rem 0;
+    width: 100%;
+}
+
+main #top {
+    margin: unset;
+}
+
+
+
+
+
+.wrapper {
+    margin-bottom: 2rem;
+}
+
+.wrapper i {
+    font-size: 6rem;
+    color: var(--main-color);
+    margin-right: 3rem;
+}
+
+.wrapper .text {
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+#how-it-works-section video {
+    width: 100%;
+}
+
+
+
+
+
+#pricing-section .card {
+    width: 5rem;
+    height: 10rem;
+    border: 0.2rem solid var(--fourth-color);
+    text-align: center;
+    border-radius: 0.3rem;
+}
+
+.card-header {
+    text-transform: uppercase;
+    background-color: var(--fourth-color);
+}
+
+.card-price {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.card-body {
+    margin: 1rem 0;
+}
+
+.card-button {
+    width: 80%;
+    height: 3rem;
+    color: white;
+    border: none;
+    border-radius: 0.2rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    background-color: var(--main-color);
+}
+
+.card-button:hover {
     color: var(--main-color);
     background-color: var(--third-color);
     border: 0.2rem solid var(--main-color);
@@ -120,35 +206,15 @@ main #form {
 }
 
 
-.landing-link {
-    height: 5rem;
-    margin-top: -5rem;
-}
-
-
-
-
-
-
-main #how-it-works-section video {
-    margin: 0 auto;
-    width: 100%;
-}
-
-
-
-
 
 
 footer {
+    margin: 0 auto; 
     width: 80%;
     background-color: var(--fourth-color);
     padding: 1.5rem;
     color: white;
     text-align: right;
-    position: fixed;
-    bottom: 0;
-    left: 10%;
 }
 
 footer nav {
@@ -162,3 +228,9 @@ footer nav {
 footer a {
     color: white;
 }
+
+
+/* .landing-link {
+    height: 20rem;
+    margin-top: -20rem;
+} */

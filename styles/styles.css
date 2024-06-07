@@ -62,7 +62,6 @@ header .logo {
 
 header nav {
     gap: 4rem;
-    
     width: 50%;
 }
 
@@ -83,7 +82,7 @@ main {
 }
 
 
-main #top {
+main #top-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -91,7 +90,7 @@ main #top {
     text-align: center;
 }
 
-#top input[type="email"] {
+#top-section input[type="email"] {
     width: 50%;
     height: 3rem;
     border-radius: 0.2rem;
@@ -101,7 +100,7 @@ main #top {
     padding-left: 1rem;
 }
 
-#top input[type="submit"] {
+#top-section input[type="submit"] {
     width: 25%;
     height: 5rem;
     color: white;
@@ -112,7 +111,7 @@ main #top {
     background-color: var(--main-color);
 }
 
-#top input[type="submit"]:hover {
+#top-section input[type="submit"]:hover {
     color: var(--main-color);
     background-color: var(--third-color);
     border: 0.2rem solid var(--main-color);
@@ -126,46 +125,37 @@ main section {
     width: 100%;
 }
 
-main #top {
-    margin: unset;
-}
-
-
-
-
-
 .wrapper {
     margin-bottom: 2rem;
+    display: flex;
+    gap: 3rem;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .wrapper i {
     font-size: 6rem;
     color: var(--main-color);
-    margin-right: 3rem;
+    width: 10%;
 }
 
 .wrapper .text {
-    display: inline-block;
+    width: 90%;
 }
 
-
-
-
-
-
-
-
-#how-it-works-section video {
+iframe {
+    display: block;
+    margin: 0 auto;
     width: 100%;
 }
 
-
-
-
+#pricing-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+}
 
 #pricing-section .card {
-    width: 5rem;
-    height: 10rem;
     border: 0.2rem solid var(--fourth-color);
     text-align: center;
     border-radius: 0.3rem;
@@ -174,6 +164,9 @@ main #top {
 .card-header {
     text-transform: uppercase;
     background-color: var(--fourth-color);
+    color: white;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
 }
 
 .card-price {
@@ -194,6 +187,7 @@ main #top {
     font-size: 2rem;
     text-transform: uppercase;
     background-color: var(--main-color);
+    margin: 1rem 0;
 }
 
 .card-button:hover {
@@ -204,9 +198,6 @@ main #top {
     transition: all 0.15s;
     cursor: pointer;
 }
-
-
-
 
 footer {
     margin: 0 auto; 
@@ -230,7 +221,57 @@ footer a {
 }
 
 
-/* .landing-link {
-    height: 20rem;
-    margin-top: -20rem;
-} */
+.landing-link {
+    height: 5rem;
+    margin-top: -5rem;
+}
+
+@media all and (max-width: 1024px) {
+    #top-section input[type="submit"] {
+        font-size: 2rem;
+    }
+}
+
+@media all and (max-width: 880px) {
+    header h1 {
+        font-size: 3rem;
+    }
+    header i {
+        font-size: 3rem;
+    }
+}
+
+
+@media all and (max-width: 778px) {
+    #top-section input[type="submit"] {
+        font-size: 1.5rem;
+    }
+    .wrapper i {
+        font-size: 4rem;
+        width: 20%;
+    }
+    .wrapper .text {
+        width: 80%;
+    }
+    #pricing-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media all and (max-width: 720px) {
+    header nav {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-end;
+        width: 25%;
+    }
+}
+
+@media all and (max-width: 580px) {
+    #top-section input[type="submit"] {
+        font-size: 1rem;
+    }
+    header h1 {
+        font-size: 2.5rem;
+    }
+}

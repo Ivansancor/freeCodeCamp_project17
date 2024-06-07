@@ -82,7 +82,7 @@ main {
 }
 
 
-main #top-section {
+main #top-section form {
     display: flex;
     flex-direction: column;
     justify-content: center;
